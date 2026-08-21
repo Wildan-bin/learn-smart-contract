@@ -3,13 +3,17 @@
 
 my_favorite_number: public(uint256)
 
+@deploy
+def __init__():
+    self.my_favorite_number = 7
+
 @external
 def store(new_number: uint256):
     self.my_favorite_number= new_number
-    self.retrieve()
+    # self.retrieve()
 
 @view
-@internal
+@external
 def retrieve() -> uint256:
     return self.my_favorite_number
 
