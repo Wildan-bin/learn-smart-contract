@@ -24,3 +24,7 @@ def __init__():
     
     self.person.name = "Wildan"
     self.person.age = 21
+
+    p: Person = self.person
+    p.name = "Robin"
+    p.age = 22
