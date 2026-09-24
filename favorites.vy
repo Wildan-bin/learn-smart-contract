@@ -3,6 +3,7 @@
 
 my_favorite_number: public(uint256)
 list_of_numbers: public(uint256[5])
+i: public(uint256)
 
 @deploy
 def __init__():
@@ -19,8 +20,9 @@ def retrieve() -> uint256:
     return self.my_favorite_number
 
 @external
-def add_number(favorite_number: uint256):
-    self.list_of_numbers[0] = favorite_number
+def add_number(favorite_number: uint256, i: uint256):
+    self.i = i
+    self.list_of_numbers[i] = favorite_number
 
 # saya belajar mengenai function yang bisa dianggap sebagai transaction (default)
 # dan juga function yang dianggap sebagai view
