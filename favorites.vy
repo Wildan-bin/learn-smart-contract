@@ -23,12 +23,6 @@ def __init__():
 @external
 def store(new_number: uint256):
     self.my_favorite_number= new_number
-    # self.retrieve()
-
-@view
-@external
-def retrieve() -> uint256:
-    return self.my_favorite_number
 
 @external
 def add_number(name: String[100], favorite_number: uint256):
